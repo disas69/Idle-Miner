@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a09f0292f2f61a54fbdaa8ce47f69c23, type: 3}
+  m_Name: Work
+  m_EditorClassIdentifier: 
+  _name: Work
+  _action: {fileID: 11400000, guid: 1b1c55b14e022dc4aa4b812c8769c40c, type: 2}
+  _transitions:
+  - _condition: {fileID: 11400000, guid: e67882db6e9102c46bf47e171fd41079, type: 2}
+    _state: {fileID: 11400000, guid: 8b83d6805a0323c4e9dd8891a735e6cd, type: 2}
