@@ -113,8 +113,8 @@ TextureImporter:
       name: undead_attack_sheet_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 8
+        x: 7
+        y: 5
         width: 30
         height: 35
       alignment: 0
@@ -128,7 +128,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 62
-        y: 8
+        y: 5
         width: 30
         height: 35
       alignment: 0
@@ -141,10 +141,10 @@ TextureImporter:
       name: undead_attack_sheet_2
       rect:
         serializedVersion: 2
-        x: 122
-        y: 8
-        width: 29
-        height: 35
+        x: 119
+        y: 5
+        width: 32
+        height: 39
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,10 +155,10 @@ TextureImporter:
       name: undead_attack_sheet_3
       rect:
         serializedVersion: 2
-        x: 178
-        y: 8
-        width: 29
-        height: 35
+        x: 174
+        y: 4
+        width: 33
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,10 +169,10 @@ TextureImporter:
       name: undead_attack_sheet_4
       rect:
         serializedVersion: 2
-        x: 229
-        y: 8
-        width: 30
-        height: 35
+        x: 226
+        y: 5
+        width: 33
+        height: 39
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,10 +183,10 @@ TextureImporter:
       name: undead_attack_sheet_5
       rect:
         serializedVersion: 2
-        x: 285
-        y: 8
-        width: 30
-        height: 35
+        x: 283
+        y: 4
+        width: 33
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,10 +197,10 @@ TextureImporter:
       name: undead_attack_sheet_6
       rect:
         serializedVersion: 2
-        x: 341
-        y: 8
-        width: 32
-        height: 35
+        x: 336
+        y: 4
+        width: 37
+        height: 41
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,10 +211,10 @@ TextureImporter:
       name: undead_attack_sheet_7
       rect:
         serializedVersion: 2
-        x: 410
-        y: 5
-        width: 30
-        height: 35
+        x: 407
+        y: 3
+        width: 34
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,7 +282,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 692
-        y: 8
+        y: 5
         width: 23
         height: 35
       alignment: 0
@@ -296,7 +296,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 748
-        y: 7
+        y: 5
         width: 25
         height: 35
       alignment: 0
@@ -309,8 +309,8 @@ TextureImporter:
       name: undead_attack_sheet_14
       rect:
         serializedVersion: 2
-        x: 804
-        y: 7
+        x: 803
+        y: 5
         width: 29
         height: 35
       alignment: 0
@@ -324,7 +324,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 860
-        y: 8
+        y: 5
         width: 16
         height: 35
       alignment: 0
@@ -338,7 +338,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 915
-        y: 8
+        y: 5
         width: 20
         height: 35
       alignment: 0
@@ -352,7 +352,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 960
-        y: 7
+        y: 4
         width: 28
         height: 35
       alignment: 0
@@ -366,7 +366,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1013
-        y: 7
+        y: 5
         width: 31
         height: 35
       alignment: 0
@@ -380,7 +380,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1070
-        y: 8
+        y: 5
         width: 30
         height: 35
       alignment: 0

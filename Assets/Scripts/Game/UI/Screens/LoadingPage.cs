@@ -1,5 +1,5 @@
-﻿using Framework.UI.Structure.Base.Model;
-using Framework.UI.Structure.Base.View;
+﻿using UI.Structure.Base.Model;
+using UI.Structure.Base.View;
 
 namespace Game.UI.Screens
 {

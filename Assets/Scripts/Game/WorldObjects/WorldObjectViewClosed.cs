@@ -5,14 +5,14 @@ using Game.Utils;
 using UnityEngine;
 using Zenject;
 
-namespace Game.WorldObjects.Base
+namespace Game.WorldObjects
 {
     public class WorldObjectViewClosed : MonoBehaviour
     {
         private int _upgradeCost;
 
         [Inject] private IResourceManager _resourceManager;
-        [SerializeField] private GameButton _activateButton;
+        [SerializeField] private SpriteButton _activateButton;
         [SerializeField] private TextMesh _upgradeCostText;
 
         public void SetActive(bool isActive)

@@ -21,7 +21,7 @@ namespace Game.Commands
             }
             else
             {
-                Debug.Log(string.Format("Can't execute command for \"{0}\" because it is not assigned.", gameObject.name));
+                UnityEngine.Debug.Log(string.Format("Can't execute command for \"{0}\" because it is not assigned.", gameObject.name));
             }
         }
     }

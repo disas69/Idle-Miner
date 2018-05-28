@@ -1,6 +1,6 @@
-using Framework.UI.Structure;
 using Game.Core.Resources.Manager;
 using Game.Core.Session;
+using UI.Structure;
 using Zenject;
 
 namespace Game.Core

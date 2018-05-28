@@ -6,7 +6,7 @@ using Game.Utils;
 using UnityEngine;
 using Zenject;
 
-namespace Game.WorldObjects.Base
+namespace Game.WorldObjects
 {
     public class WorldObjectViewOpened : MonoBehaviour
     {
@@ -14,9 +14,10 @@ namespace Game.WorldObjects.Base
         private int _managerCost;
 
         [Inject] private IResourceManager _resourceManager;
-        [SerializeField] private GameButton _upgradeButton;
-        [SerializeField] private GameButton _managerButton;
+        [SerializeField] private SpriteButton _upgradeButton;
+        [SerializeField] private SpriteButton _managerButton;
         [SerializeField] private Manager _managerView;
+        [SerializeField] private TextMesh _upgradeCostText;
         [SerializeField] private TextMesh _managerCostText;
 
         public void SetActive(bool isActive)
@@ -43,6 +44,7 @@ namespace Game.WorldObjects.Base
             _upgradeCost = upgradeCost;
             _managerCost = managerCost;
 
+            _upgradeCostText.text = FormatHelper.FormatCost(upgradeCost, ResourceType.Gold);
             _managerCostText.text = FormatHelper.FormatCost(managerCost, ResourceType.Gold);
             _managerButton.gameObject.SetActive(!isManagerAssigned);
             _managerView.SetActive(isManagerAssigned);

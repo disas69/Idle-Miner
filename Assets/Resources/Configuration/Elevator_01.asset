@@ -20,27 +20,3 @@ MonoBehaviour:
     _load: 0
     _moveTime: 0
     _workTime: 0
-  - _level: 2
-    _upgradeCost: 0
-    _units: 1
-    _load: 0
-    _moveTime: 0
-    _workTime: 0
-  - _level: 3
-    _upgradeCost: 0
-    _units: 1
-    _load: 0
-    _moveTime: 0
-    _workTime: 0
-  - _level: 4
-    _upgradeCost: 0
-    _units: 1
-    _load: 0
-    _moveTime: 0
-    _workTime: 0
-  - _level: 5
-    _upgradeCost: 0
-    _units: 1
-    _load: 0
-    _moveTime: 0
-    _workTime: 0

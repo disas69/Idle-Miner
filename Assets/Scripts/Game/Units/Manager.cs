@@ -20,7 +20,7 @@ namespace Game.Units
             gameObject.SetActive(isActive);
         }
 
-        public void Triggered()
+        public void SetTriggered()
         {
             _animator.SetTrigger("Work");
         }

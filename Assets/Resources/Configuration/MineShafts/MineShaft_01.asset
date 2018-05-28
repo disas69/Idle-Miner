@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: MineShaft_01
   m_EditorClassIdentifier: 
   _id: 3b77922c92a37264ca1e061fd12a5275
-  _managerCost: 500
+  _managerCost: 250
   _settingsList:
   - _level: 1
     _upgradeCost: 100

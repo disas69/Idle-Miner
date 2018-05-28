@@ -1,11 +1,12 @@
-﻿using Framework.Tools.Gameplay;
-using Framework.UI.Structure;
+﻿using System.Collections;
 using Game.Core.Data;
 using Game.Core.Resources.Manager;
 using Game.Core.Session;
 using Game.UI.Popups;
 using Game.UI.Screens;
 using Game.WorldObjects.Base;
+using Tools.Gameplay;
+using UI.Structure;
 using UnityEngine;
 using Zenject;
 
@@ -33,15 +34,19 @@ namespace Game.Core
             _gameStateMachine.AddTransition(GameState.Initialization, GameState.Play, StartGame);
 
             NavigationProvider.OpenScreen<LoadingPage>();
-            Initialize(Session.Data);
+            StartCoroutine(LoadGame(Session.Data));
         }
 
-        private void Initialize(IGameData gameData)
+        private IEnumerator LoadGame(IGameData gameData)
         {
+            //Waiter is used just to simulate a complex task processing
+            var waiter = new WaitForSeconds(0.5f);
+
             var worldObjects = _worldRoot.GetComponentsInChildren<IWorldObject>(true);
             for (int i = 0; i < worldObjects.Length; i++)
             {
                 worldObjects[i].Initialize(gameData);
+                yield return waiter;
             }
 
             _gameStateMachine.SetState(GameState.Play);
@@ -75,7 +80,7 @@ namespace Game.Core
             SaveSession();
         }
 
-        private void SaveSession()
+        private static void SaveSession()
         {
             Session.Data.GetLastSessionTimeData().Capture();
             Session.Save();

@@ -9,5 +9,6 @@ namespace Game.Core.Resources
         int Amount { get; }
         void Increase(int value);
         void Decrease(int value);
+        void Reset();
     }
 }

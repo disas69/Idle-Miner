@@ -1,4 +1,4 @@
-﻿using Framework.Tools.Data;
+﻿using Data;
 using UnityEngine;
 
 namespace Game.Core.Data

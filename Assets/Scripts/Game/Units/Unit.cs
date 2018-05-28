@@ -1,6 +1,6 @@
 ﻿using System;
-using Framework.Extensions;
-using Framework.Tools.FSM;
+using Extensions;
+using FSM;
 using Game.Commands;
 using Game.Core.Resources;
 using Game.Core.Resources.Currency;
@@ -70,12 +70,12 @@ namespace Game.Units
         public void FinishWork()
         {
             WorkFinished.SafeInvoke(_gold.Amount);
-            _gold = new GoldResource();
+            _gold.Reset();
         }
 
         public void TriggerManager()
         {
-            _manager.Triggered();
+            _manager.SetTriggered();
         }
     }
 }

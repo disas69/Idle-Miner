@@ -1,6 +1,6 @@
-﻿using Framework.UI.Structure.Base.View;
-using Game.Core;
+﻿using Game.Core;
 using Game.Utils;
+using UI.Structure.Base.View;
 using UnityEngine;
 using UnityEngine.UI;
 

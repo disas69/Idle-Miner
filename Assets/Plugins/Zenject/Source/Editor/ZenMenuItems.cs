@@ -238,7 +238,7 @@ namespace Zenject
                 GameObject.DestroyImmediate(gameObject);
             }
 
-            Debug.Log("Created new ProjectContext at '{0}'".Fmt(prefabPath));
+            UnityEngine.Debug.Log("Created new ProjectContext at '{0}'".Fmt(prefabPath));
         }
 
         static void AddCSharpClassTemplate(
@@ -314,7 +314,7 @@ namespace Zenject
             }
             else
             {
-                Debug.Log("Validation cancelled - All scenes must be saved first for validation to take place");
+                UnityEngine.Debug.Log("Validation cancelled - All scenes must be saved first for validation to take place");
                 return false;
             }
         }

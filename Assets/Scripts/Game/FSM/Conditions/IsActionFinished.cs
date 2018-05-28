@@ -1,4 +1,4 @@
-﻿using Framework.Tools.FSM;
+﻿using FSM;
 using UnityEngine;
 
 namespace Game.FSM.Conditions

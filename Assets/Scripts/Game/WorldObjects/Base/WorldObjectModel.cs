@@ -1,5 +1,6 @@
 ﻿using System;
-using Framework.Extensions;
+using Extensions;
+using Game.Core;
 using Game.Core.Data;
 using Game.Core.Resources;
 using Game.WorldObjects.Base.Configuration;
@@ -82,7 +83,7 @@ namespace Game.WorldObjects.Base
                 return;
             }
 
-            GameData.GetResource(ResourceType.Gold).Decrease(UpgradeCost);
+            GameContext.ResourceManager.Decrease(ResourceType.Gold, UpgradeCost);
 
             Level++;
             IsOpened = true;
@@ -101,13 +102,16 @@ namespace Game.WorldObjects.Base
 
             IdleMining = CalculateIdleMining();
             SaveState(Configuration.Id, Level, IsManagerAssigned, IdleMining);
+
+            UnityEngine.Debug.Log(string.Format("{0} upgrade: Level -> {1}, Units -> {2} Load -> {3}, Move Time -> {4}, Work Time -> {5}",
+                GetType().Name, Level, Settings.Units, Settings.Load, Settings.MoveTime, Settings.WorkTime));
         }
 
         public void AssignManager(bool isManagerAssigned)
         {
             if (isManagerAssigned)
             {
-                GameData.GetResource(ResourceType.Gold).Decrease(ManagerCost);
+                GameContext.ResourceManager.Decrease(ResourceType.Gold, ManagerCost);
             }
 
             IsManagerAssigned = isManagerAssigned;

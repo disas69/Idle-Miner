@@ -1,5 +1,5 @@
 ﻿using System;
-using Framework.Extensions;
+using Extensions;
 using Game.Core.Data;
 using Game.Core.Resources;
 using UnityEngine;
@@ -11,7 +11,6 @@ namespace Game.Core.Session
         private readonly DataKeeper _dataKeeper;
 
         public event Action<IGameData> Initialized;
-        public bool IsInitialized { get; private set; }
         public int IdleMiningResul { get; private set; }
 
         public IGameData Data
@@ -29,6 +28,7 @@ namespace Game.Core.Session
 
         private void Initialize()
         {
+            //TODO: Get the right date using NTP synchronization in order to prevent cheating
             var lastSessionData = _dataKeeper.Data.GetLastSessionTimeData();
             if (lastSessionData.IsCaptured())
             {
@@ -40,7 +40,6 @@ namespace Game.Core.Session
                 }
             }
 
-            IsInitialized = true;
             Initialized.SafeInvoke(Data);
         }
 

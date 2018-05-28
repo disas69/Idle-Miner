@@ -1,6 +1,7 @@
 ﻿using System;
-using Framework.Extensions;
+using Extensions;
 using Game.Core.Session;
+using UnityEngine;
 using Zenject;
 
 namespace Game.Core.Resources.Manager
@@ -37,11 +38,17 @@ namespace Game.Core.Resources.Manager
         public void Increase(ResourceType resourceType, int value)
         {
             _gameSession.Data.GetResource(resourceType).Increase(value);
+
+            UnityEngine.Debug.Log(string.Format("{0} earned: {1}. Total {0}: {2}", resourceType, value,
+                _gameSession.Data.GetResource(resourceType).Amount));
         }
 
         public void Decrease(ResourceType resourceType, int value)
         {
             _gameSession.Data.GetResource(resourceType).Decrease(value);
+
+            UnityEngine.Debug.Log(string.Format("{0} spent: {1}. Total {0}: {2}", resourceType, value,
+                _gameSession.Data.GetResource(resourceType).Amount));
         }
 
         private void OnGemsAmountChanged(int amount)

@@ -1,5 +1,5 @@
 ﻿using System;
-using Framework.Extensions;
+using Extensions;
 using UnityEngine;
 
 namespace Game.Core.Resources.Currency
@@ -41,6 +41,11 @@ namespace Game.Core.Resources.Currency
             }
 
             AmountChanged.SafeInvoke(_amount);
+        }
+
+        public void Reset()
+        {
+            _amount = 0;
         }
     }
 }
