@@ -7,6 +7,7 @@ namespace Game.Core.Session
     {
         event Action<IGameData> Initialized;
         bool IsInitialized { get; }
+        int IdleMiningResul { get; }
         IGameData Data { get; }
         void Save();
     }

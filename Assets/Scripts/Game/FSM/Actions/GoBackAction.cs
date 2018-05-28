@@ -29,6 +29,7 @@ namespace Game.FSM.Actions
 
         public override void OnEnter()
         {
+            _unit.Animator.SetTrigger("GoBack");
             _isFinished = false;
             _time = 0f;
         }

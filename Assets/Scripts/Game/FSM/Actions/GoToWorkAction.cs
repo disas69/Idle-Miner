@@ -30,6 +30,7 @@ namespace Game.FSM.Actions
         public override void OnEnter()
         {
             _isFinished = false;
+            _unit.Animator.SetTrigger("GoToWork");
             _time = 0f;
         }
 

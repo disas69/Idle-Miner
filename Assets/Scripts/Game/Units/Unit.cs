@@ -14,9 +14,10 @@ namespace Game.Units
     {
         private CommandHandler _commandHandler;
         private FSMController _fsmController;
+        private Manager _manager;
         private IResource _gold;
 
-        public event Action<int> GoldEarned;
+        public event Action<int> WorkFinished;
 
         public Animator Animator { get; private set; }
         public Vector2 IdlePoint { get; private set; }
@@ -52,12 +53,13 @@ namespace Game.Units
             }
         }
 
-        public void UpdateSettings(IWorldObjectSettings settings, bool isManagerAssigned)
+        public void UpdateSettings(IWorldObjectSettings settings, Manager manager)
         {
             Load = settings.Load;
             MoveTime = settings.MoveTime;
             WorkTime = settings.WorkTime;
-            IsManagerAssigned = isManagerAssigned;
+            IsManagerAssigned = manager.IsAssigned;
+            _manager = manager;
         }
 
         public void ExtractGold()
@@ -67,8 +69,13 @@ namespace Game.Units
 
         public void FinishWork()
         {
-            GoldEarned.SafeInvoke(_gold.Amount);
+            WorkFinished.SafeInvoke(_gold.Amount);
             _gold = new GoldResource();
+        }
+
+        public void TriggerManager()
+        {
+            _manager.Triggered();
         }
     }
 }

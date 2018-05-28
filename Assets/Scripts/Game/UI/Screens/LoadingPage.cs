@@ -5,6 +5,5 @@ namespace Game.UI.Screens
 {
     public class LoadingPage : Page<PageModel>
     {
-
     }
 }

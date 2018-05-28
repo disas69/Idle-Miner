@@ -28,6 +28,7 @@ namespace Game.FSM.Actions
         public override void OnEnter()
         {
             _unit.transform.position = _workPoint;
+            _unit.Animator.SetTrigger("Work");
             _isFinished = false;
             _time = 0f;
         }

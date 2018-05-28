@@ -29,7 +29,12 @@ namespace Game.WorldObjects.Base
             _isInitialized = true;
         }
 
-        protected virtual void OnModelStateChanged()
+        private void OnModelStateChanged()
+        {
+            UpdateView();
+        }
+
+        protected virtual void UpdateView()
         {
         }
 

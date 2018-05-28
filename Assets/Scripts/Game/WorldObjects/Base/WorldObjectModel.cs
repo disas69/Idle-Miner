@@ -105,7 +105,10 @@ namespace Game.WorldObjects.Base
 
         public void AssignManager(bool isManagerAssigned)
         {
-            GameData.GetResource(ResourceType.Gold).Decrease(ManagerCost);
+            if (isManagerAssigned)
+            {
+                GameData.GetResource(ResourceType.Gold).Decrease(ManagerCost);
+            }
 
             IsManagerAssigned = isManagerAssigned;
             IdleMining = CalculateIdleMining();
@@ -125,9 +128,6 @@ namespace Game.WorldObjects.Base
 
         private void SaveState(string configurationId, int level, bool isManagerAssigned, int idleMining)
         {
-            Debug.Log(string.Format("{0}: id - {1}, level - {2}, manager - {3}", GetType().Name, configurationId, level,
-                isManagerAssigned));
-
             GameData.SetWorldObjectLevelData(configurationId, new WorldObjectLevelData
             {
                 Id = configurationId,

@@ -2,7 +2,7 @@
 using Framework.Extensions;
 using UnityEngine;
 
-namespace Game.Core.Resources
+namespace Game.Core.Resources.Currency
 {
     [Serializable]
     public class GemsResource : IResource

@@ -27,12 +27,14 @@ namespace Game.FSM.Actions
         public override void OnEnter()
         {
             _unit.transform.position = _idlePoint;
+            _unit.Animator.SetTrigger("Idle");
         }
 
         public override void OnUpdate()
         {
             if (_unit.IsManagerAssigned)
             {
+                _unit.TriggerManager();
                 _isFinished = true;
             }
         }

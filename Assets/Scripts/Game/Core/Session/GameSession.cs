@@ -12,6 +12,7 @@ namespace Game.Core.Session
 
         public event Action<IGameData> Initialized;
         public bool IsInitialized { get; private set; }
+        public int IdleMiningResul { get; private set; }
 
         public IGameData Data
         {
@@ -31,12 +32,11 @@ namespace Game.Core.Session
             var lastSessionData = _dataKeeper.Data.GetLastSessionTimeData();
             if (lastSessionData.IsCaptured())
             {
-                var difference = Mathf.FloorToInt((float)(DateTime.Now - lastSessionData.GetDateTime()).TotalSeconds);
+                var difference = Mathf.FloorToInt((float) (DateTime.Now - lastSessionData.GetDateTime()).TotalSeconds);
                 if (difference > 0)
                 {
-                    var idleGoldAmount = _dataKeeper.Data.TotalIdleMining * difference;
-                    Data.GetResource(ResourceType.Gold).Increase(idleGoldAmount);
-                    Debug.Log(string.Format("Idle Gold amount: {0}", idleGoldAmount));
+                    IdleMiningResul = _dataKeeper.Data.TotalIdleMining * difference;
+                    Data.GetResource(ResourceType.Gold).Increase(IdleMiningResul);
                 }
             }
 

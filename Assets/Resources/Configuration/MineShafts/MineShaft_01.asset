@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f2ae506477c4a3428af5b9694a21b65, type: 3}
+  m_Name: MineShaft_01
+  m_EditorClassIdentifier: 
+  _id: 3b77922c92a37264ca1e061fd12a5275
+  _managerCost: 500
+  _settingsList:
+  - _level: 1
+    _upgradeCost: 100
+    _units: 1
+    _load: 100
+    _moveTime: 5
+    _workTime: 3
+  - _level: 2
+    _upgradeCost: 1000
+    _units: 1
+    _load: 150
+    _moveTime: 4
+    _workTime: 3
+  - _level: 3
+    _upgradeCost: 5000
+    _units: 1
+    _load: 200
+    _moveTime: 4
+    _workTime: 2
+  - _level: 4
+    _upgradeCost: 7500
+    _units: 1
+    _load: 250
+    _moveTime: 3
+    _workTime: 2
+  - _level: 5
+    _upgradeCost: 10000
+    _units: 2
+    _load: 300
+    _moveTime: 2
+    _workTime: 2
